@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Wedding Invitation</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Cormorant+Garamond:wght@300;400;600&family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <style>
+    body {
+      margin: 0;
+      background: #ffffff;
+      text-align: center;
+      font-family: 'Cormorant Garamond', serif;
+      color: #222;
+    }
+
+    .divider {
+      margin: 18px auto;
+      font-size: 18px;
+      color: #c59d5f;
+      letter-spacing: 6px;
+    }
+
+    .hero-container { position: relative; }
+
+    img.hero {
+      width: 100%;
+      height: 320px;
+      object-fit: cover;
+      filter: brightness(0.78);
+    }
+
+    .hero-text {
+      position: absolute;
+      top: 68%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-family: 'Great Vibes', cursive;
+      font-size: 42px;
+      color: #d4af37;
+      text-shadow: 0 0 12px rgba(212,175,55,0.35);
+      opacity: 0;
+      animation: fadeIn 2s ease forwards;
+    }
+
+    @keyframes fadeIn { to { opacity: 1; } }
+
+    .section { padding: 28px 20px; }
+
+    .date-item i { color:#c59d5f; margin-right:6px; }
+
+    .countdown {
+      display:flex;
+      justify-content:center;
+      gap:18px;
+      margin-top:25px;
+      font-family:'Playfair Display', serif;
+    }
+
+    .countdown div {
+      font-size:28px;
+      color:#c59d5f;
+      min-width:75px;
+    }
+
+    small { font-size:14px; color:#666; display:block; }
+
+    /* BUTTONS */
+    button {
+      font-family:'Cormorant Garamond', serif;
+      cursor:pointer;
+      transition: all 0.2s ease;
+      border-radius:999px;
+      font-size:17px;
+      user-select:none;
+    }
+
+    .btn-gold {
+      width:85%;
+      padding:14px;
+      margin-top:10px;
+      background: linear-gradient(135deg,#d4af37,#f9e27d);
+      border:none;
+      font-weight:700;
+      box-shadow:0 8px 22px rgba(212,175,55,0.35);
+    }
+
+    .btn-gold:active { transform: scale(0.97); }
+
+    .btn-outline {
+      padding:10px 16px;
+      margin:6px;
+      background:transparent;
+      border:1px solid #c59d5f;
+      color:#c59d5f;
+    }
+
+    .btn-outline:hover {
+      background:rgba(197,157,95,0.12);
+    }
+
+    .btn-outline.active {
+      background:#c59d5f;
+      color:#fff;
+      box-shadow:0 0 10px rgba(197,157,95,0.4);
+    }
+
+    input {
+      padding:12px;
+      width:80%;
+      border-radius:10px;
+      border:1px solid #ddd;
+      margin-top:10px;
+    }
+
+    /* MODAL */
+    .modal {
+      display:none;
+      position:fixed;
+      top:0;left:0;
+      width:100%;height:100%;
+      background:rgba(0,0,0,0.6);
+      align-items:center;
+      justify-content:center;
+    }
+
+    .modal-content {
+      background:#fff;
+      padding:25px;
+      border-radius:15px;
+      width:80%;
+      max-width:300px;
+      text-align:center;
+      animation: pop 0.3s ease;
+    }
+
+    @keyframes pop {
+      from { transform:scale(0.7); opacity:0; }
+      to { transform:scale(1); opacity:1; }
+    }
+
+    .modal-content h3 {
+      color:#c59d5f;
+      margin-bottom:10px;
+    }
+  </style>
+</head>
+<body>
+
+<div class="hero-container">
+  <img class="hero" src="https://t4.ftcdn.net/jpg/08/57/52/71/360_F_857527152_9nMclYRbfrYCXdwYPJtOyaUkRBwLbpd5.jpg" />
+  <div class="hero-text">Müşviq ✨ Günay</div>
+</div>
+
+<div class="divider">❦ ❦ ❦</div>
+
+<div class="section">
+  Sizi həyatımızın ən xoş gününü birlikdə qeyd etməyə dəvət edirik
+</div>
+
+<div class="divider">✦ ✦ ✦</div>
+
+<div class="section">
+  <div class="date-item"><i class="fa-solid fa-calendar-days"></i>29 May 2026</div>
+  <div class="date-item"><i class="fa-solid fa-clock"></i>18:00</div>
+  <div class="date-item"><i class="fa-solid fa-location-dot"></i>Zirvə Şadlıq Sarayı</div>
+</div>
+
+<div class="divider">❦ ❦ ❦</div>
+
+<div class="section">
+  <h2>Geri Sayım</h2>
+  <div class="countdown">
+    <div><span id="days">0</span><small>gün</small></div>
+    <div><span id="hours">0</span><small>saat</small></div>
+    <div><span id="minutes">0</span><small>dəq</small></div>
+    <div><span id="seconds">0</span><small>san</small></div>
+  </div>
+</div>
+
+<div class="divider">✦ ✦ ✦</div>
+
+<div class="section">
+  <button class="btn-gold" onclick="window.open('https://www.google.com/maps/place/Zirv%C9%99+%C5%9Eadl%C4%B1q+Saray%C4%B1/@40.4187227,49.8432053,17z')">
+    📍 Xəritədə bax
+  </button>
+</div>
+
+<div class="divider">❦ ❦ ❦</div>
+
+<div class="section">
+  <h2>İştirak təsdiqi</h2>
+
+  <form action="https://formspree.io/f/mqewwbrd" method="POST" onsubmit="showModal(event)">
+    <input type="text" name="fullname" id="fullname" placeholder="Ad Soyad" required />
+
+    <br/>
+    <button type="button" class="btn-outline" onclick="selectStatus(this,'yes')">Gəlirəm</button>
+    <button type="button" class="btn-outline" onclick="selectStatus(this,'no')">Gəlmirəm</button>
+
+    <input type="hidden" name="status" id="status" />
+
+    <br/>
+    <button class="btn-gold" type="submit">✨ Göndər</button>
+  </form>
+</div>
+
+<!-- MODAL -->
+<div class="modal" id="modal">
+  <div class="modal-content">
+    <h3>✨ Təşəkkürlər!</h3>
+    <p>Sizin cavabınız qəbul edildi 💖</p>
+  </div>
+</div>
+
+<script>
+  const targetDate = new Date('2026-05-29T18:00:00').getTime();
+
+  setInterval(() => {
+    const now = new Date().getTime();
+    const diff = targetDate - now;
+
+    document.getElementById('days').innerText = Math.floor(diff / (1000*60*60*24));
+    document.getElementById('hours').innerText = Math.floor((diff / (1000*60*60)) % 24);
+    document.getElementById('minutes').innerText = Math.floor((diff / (1000*60)) % 60);
+    document.getElementById('seconds').innerText = Math.floor((diff / 1000) % 60);
+  }, 1000);
+
+  let selectedBtn = null;
+
+  function selectStatus(btn, value) {
+    document.getElementById('status').value = value;
+
+    document.querySelectorAll('.btn-outline').forEach(b=>b.classList.remove('active'));
+    btn.classList.add('active');
+
+    btn.style.transform = 'scale(0.95)';
+    setTimeout(()=>btn.style.transform='scale(1)',150);
+  }
+
+  function showModal(e){
+    setTimeout(()=>{
+      document.getElementById('modal').style.display='flex';
+      setTimeout(()=>{
+        document.getElementById('modal').style.display='none';
+      },2500);
+    },300);
+  }
+</script>
+
+</body>
+</html>
