@@ -8,8 +8,7 @@
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@500;700&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
-  <style>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant:wght@300;400&display=swap" rel="stylesheet">  <style>
     body {
       margin: 0;
       background: #ffffff;
@@ -20,7 +19,7 @@
 
     .divider {
       margin: 18px auto;
-      font-size: 18px;
+      font-size: 22px;
       color: #d4c08a;
       letter-spacing: 6px;
       opacity: 0.8;
@@ -30,19 +29,20 @@
 
     img.hero {
       width: 100%;
-      height: 320px;
+      /*height: 320px;*/
       object-fit: cover;
       filter: brightness(0.75);
     }
 
     .hero-text {
+      width: 80%;
       position: absolute;
-      top: 70%;
+      top: 75%;
       left: 50%;
       transform: translate(-50%, -50%);
       font-family: 'Great Vibes', cursive;
       font-size: 46px;
-      color: #d4af37;
+      color: #fff;
       text-shadow: 0 0 14px rgba(212,175,55,0.35);
       opacity: 0;
       animation: fadeIn 2s ease forwards;
@@ -62,8 +62,9 @@
     }
 
     .date-item {
-      margin: 8px 0;
+      margin: 19px auto;
       font-size: 15px;
+      width: 56%;
       color: #666;
       letter-spacing: 0.3px;
     }
@@ -98,16 +99,16 @@
 
     /* GOLD BUTTON */
     .btn-gold {
-      width:85%;
+      width:98%;
       padding:15px;
       margin-top:12px;
-      background: linear-gradient(135deg,#d4af37,#f3d27a);
-      border:none;
-      border-radius:50px;
+
+      border:1px solid #d4af37;
+      border-radius:5px;
       font-weight:500;
       letter-spacing:1px;
-      color:#222;
-      box-shadow:0 10px 25px rgba(212,175,55,0.3);
+      background-color: #fff;
+      color: #d4af37;
       cursor:pointer;
       transition:all 0.25s ease;
     }
@@ -148,21 +149,21 @@
 
     /* INPUT */
     input {
-      padding:14px 16px;
+      padding:14px 1%;
       width:80%;
       border-radius:30px;
-      border:1px solid #eee;
+      border:1px solid #cbb27a;
       margin-top:12px;
       font-size:15px;
       outline:none;
       transition:all 0.25s ease;
-      background:#fafafa;
+      background:#fff;
       color:#444;
     }
 
     input::placeholder {
-      color:#aaa;
-      font-style:italic;
+      color:#cbb27a;
+      /*font*/-style:italic;
     }
 
     input:focus {
@@ -212,61 +213,62 @@
 <body>
 
 <div class="hero-container">
-  <img class="hero" src="https://media.istockphoto.com/id/940217166/photo/exchange-of-wedding-rings-white.jpg?s=612x612&w=0&k=20&c=90KBKD25Ab6NevFoA3bW4hqrX3FLM4dAl5FU6NLBTPo=" />
-  <div class="hero-text">Müşviq ✨ Günay</div>
+  <img class="hero" src="wcover.jpg" />
+  <div class="hero-text">Müşviq & Günay</div>
 </div>
 
-<div class="divider">❦ ❦ ❦</div>
+<div class="divider" style="margin-top: 44px">✦</div>
 
-<div class="section">
-  Sizi həyatımızın ən xoş gününü birlikdə qeyd etməyə dəvət edirik
+<div class="section" style="font-family: 'Cormorant', serif;
+  font-weight: 300;font-size: 22px">
+  "Həyatımızın ən xüsusi gününə adddım atarkən, sevgimizi və sevincimizi sizinlə bölüşmək bizə sonsuz xöşbətlik bəxş edər. Bu unudulmaz gecədə yanımızda olmağınızdiləyi ilə..."
 </div>
 
-<div class="divider">✦ ✦ ✦</div>
+<div class="divider" >✦</div>
 
 <div class="section">
-  <div class="date-item"><i class="fa-solid fa-calendar-days"></i>29 May 2026</div>
-  <div class="date-item"><i class="fa-solid fa-clock"></i>18:00</div>
-  <div class="date-item"><i class="fa-solid fa-location-dot"></i>Zirvə Şadlıq Sarayı</div>
+  <div class="date-item" ><i style="font-size: 24px;"><b>29 May 2026</b></i></div>
+  <div class="date-item" style="color:#cbb27a">SAAT: 18:00</div>
+  <div class="date-item" style="width:68%;font-size: 21px; border-bottom: 2px solid #cbb27a">ZİRVƏ ŞADLIQ SARAYI</div>
 </div>
 
-<div class="divider">❦ ❦ ❦</div>
+<div class="divider">✦</div>
 
 <div class="section">
-  <h2>Geri Sayım</h2>
+  <p style="color: #cbb27a">GERİ SAYIM</p>
   <div class="countdown">
-    <div><span id="days">0</span><small>gün</small></div>
-    <div><span id="hours">0</span><small>saat</small></div>
-    <div><span id="minutes">0</span><small>dəq</small></div>
-    <div><span id="seconds">0</span><small>san</small></div>
+    <div><i id="days">0</i><small style="color: #cbb27a">GÜN</small></div>
+    <div><i id="hours">0</i><small style="color: #cbb27a">SAAT</small></div>
+    <div><i id="minutes">0</i><small style="color: #cbb27a">DƏQİQƏ</small></div>
+    <div><i id="seconds">0</i><small style="color: #cbb27a">SANİYƏ</small></div>
   </div>
 </div>
 
-<div class="divider">✦ ✦ ✦</div>
+<div class="divider">✦</div>
 
 <div class="section">
   <button class="btn-gold" onclick="window.open('https://www.google.com/maps/place/Zirv%C9%99+%C5%9Eadl%C4%B1q+Saray%C4%B1')">
-    📍 Xəritədə bax
+     MƏKANA XƏRİTƏDƏ <br> BAX
   </button>
 </div>
 
-<div class="divider">❦ ❦ ❦</div>
+<div class="divider">✦</div>
 
 <div class="section">
-  <h2>İştirak təsdiqi</h2>
+  <p style="color: #cbb27a">İŞTİRAK TƏSİDİQİ</p>
 
-  <form action="https://formspree.io/f/mqewwbrd" method="POST" onsubmit="showModal(event)">
-    <input type="text" name="fullname" id="fullname" placeholder="Ad Soyad" required />
+  <form action="https://formspree.io/f/mgodwyly" method="POST" onsubmit="showModal(event)">
+    <input style="width: 95%; border-radius: 0px; " type="text" name="fullname" id="fullname" placeholder="Ad Soyad" required />
 
     <br/>
 
-    <button type="button" class="btn-outline" onclick="selectStatus(this,'Gəlirəm')">Gəlirəm</button>
-    <button type="button" class="btn-outline" onclick="selectStatus(this,'Gəlmirəm')">Gəlmirəm</button>
+    <button type="button" class="btn-gold" style="width: 48%" onclick="selectStatus(this,'Gəlirəm')">✓ GƏLİRƏM</button>
+    <button type="button" class="btn-gold" style="width: 48%" onclick="selectStatus(this,'Gəlmirəm')">✗ ALINMIR :(</button>
 
     <input type="hidden" name="status" id="status" />
 
     <br/>
-    <button class="btn-gold" type="submit">✨ Göndər</button>
+    <button class="btn-gold" type="submit">♡ Göndər</button>
   </form>
 </div>
 
